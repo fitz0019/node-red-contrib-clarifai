@@ -1,0 +1,47 @@
+<script type="text/x-red" data-template-name="tags-from-url">
+
+    <div class="form-row">
+       <label for="node-input-creds"> Credentials</label>
+       <input type="text" id="node-input-creds">
+    </div>
+
+    <br />
+
+    <div class="form-row">
+        <label for="node-input-url">URL</label>
+        <input type="text" id="node-input-url" placeholder="http://">
+    </div>
+
+    <br/>
+
+    <div class="form-row">
+        <label for="node-input-name">Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="tags-from-url">
+   <p>Analysis an image and returns tags that describe it.</p>
+   <p>To use either configure the node or pass through 'url' as a property of <b>msg.payload</b>.</p>
+   <p>Outputs an object called <b>msg</b> containing <b>msg.payload</b>. msg.payload is an Object. A property called <b>'tags'</b> will contain an array of possible tags that describe the image.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('tags-from-url',{
+        category: 'clarifai',
+        defaults: {
+            creds: {value:"", type:"clarifai-client"},
+            name: {value:""},
+            url: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "clarifai.png",
+        color: "#448AC8",
+        paletteLabel: "Lookup",
+        label: function() {
+            return this.name||"Tags from URL";
+        }
+    });
+</script>

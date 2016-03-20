@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('clarifai-client',{
+        category: 'config',
+        defaults: {
+            name: {value: ""},
+            client_id: {value: ""},
+            client_secret: {value: ""}
+        },
+        label: function() {
+            return this.name;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="clarifai-client">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-client_id"><i class="fa fa-lock"></i> ID</label>
+        <input type="text" id="node-config-input-client_id">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-client_secret"><i class="fa fa-lock"></i> Secret</label>
+        <input type="text" id="node-config-input-client_secret">
+    </div>
+</script>
