@@ -1,8 +1,8 @@
-# NodeRED nodes to wrap clarifai API
+# NodeRED nodes to wrap Clarifai API
 
 [![RedConnect Approved](https://img.shields.io/badge/RedConnect-Approved-brightgreen.svg?style=flat)](https://www.redconnect.io/addons) [![Gitter](https://img.shields.io/gitter/room/badges/shields.svg)](https://gitter.im/redconnect-io/redconnect)
 
-A set of nodes that wrap the [clarifai](http://www.clarifai.com/) API.
+A set of nodes that wrap the [Clarifai](http://www.clarifai.com/) API.
 
 ## About Clarifai
 
